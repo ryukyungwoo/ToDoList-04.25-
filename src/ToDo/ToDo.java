@@ -2,14 +2,18 @@ package ToDo;
 
 public class ToDo {
 
-    private final Long id;
-    private final String title;
-    private final String description;
+    Long id;
+    int hours;
+    int minutes;
+    String title;
+    String description;
 
-    public ToDo(Long id,String title, String description) {
+    public ToDo(Long id,String title, String description, int hours, int minutes) {
         this.id = id;
         this.title = title;
         this.description = description;
+        this.hours = hours;
+        this.minutes = minutes;
     }
 
 }

@@ -10,8 +10,8 @@ public class ToDoController {
         this.toDoService = toDoService;
     }
 
-    void makeToDo(String title, String description) {
-        toDoService.saveToDo(title, description);
+    void makeToDo(String title, String description, int hours, int minutes) {
+        toDoService.saveToDo(title, description, hours, minutes);
     }
 
     void deleteToDo(Long id) {

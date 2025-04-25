@@ -9,10 +9,14 @@ public class ToDoServiceImpl implements ToDoService {
 
 
     @Override
-    public void saveToDo(String title, String description) {
+    public void saveToDo(String title, String description, int hours, int minutes) {
         Long id = (long) todoRepository.size();
 
-        ToDo newToDo = new ToDo(id, title, description);
+        if (hours > 24 && minutes > 60) {
+            return;
+        }
+
+        ToDo newToDo = new ToDo(id, title, description, hours, minutes);
 
         todoRepository.put(id, newToDo);
     }
