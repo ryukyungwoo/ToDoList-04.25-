@@ -1,11 +1,12 @@
 package ToDo;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 public class ToDoServiceImpl implements ToDoService {
-    Map<Long, ToDo> todoRepository;
+    Map<Long, ToDo> todoRepository = new HashMap<>();
 
 
     @Override
